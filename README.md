@@ -1,17 +1,43 @@
 # methods-practice
 Give a short description of what the method does, how it works, it's time complexity, and give three examples of it in action!
 
-#Array Methods:
+# Array Methods:
 
 map 
 The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
 Time complexity
 Therefore, the function loops through every object in the array, having a complexity of O(n)
 
+const array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
+
+
+
 reduce
 The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 Time complexity
 Therefore, the function loops through every object in the array, having a complexity of O(n)
+
+const array1 = [1, 2, 3, 4];
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
+
+// 5 + 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer, 5));
+// expected output: 15
+
+
+
+
+
 
 filter
 The filter() method creates a new array with all elements that pass the test implemented by the provided function.
@@ -86,7 +112,7 @@ The every() method tests whether all elements in the array pass the test impleme
 
 
 
-#String Methods:
+# String Methods:
 
 charAt
 The String object's charAt() method returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.
